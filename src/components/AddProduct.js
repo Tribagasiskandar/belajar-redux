@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import {update} from "../features/ProductSlice"
+import { saveProduct } from '../features/ProductSlice'
+import {useNavigate} from 'react-router-dom'
 const AddProduct = () => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const dispacth = useDispatch()
-
-        const updateProduct = (e) => {
+    const navigate = useNavigate()
+    const createProduct = async(e) => {
         e.preventDefault()
-        dispacth(update({title, price}))
+       await dispacth(saveProduct({title, price}))
+        navigate('/')
+
     }
   return (
     <div>
-        <form onSubmit={updateProduct} className='box mt-5'>
+        <form onSubmit={createProduct}  className='box mt-5'>
             <div className="field">
                 <label  className="label">Title</label>
                 <div className="control">

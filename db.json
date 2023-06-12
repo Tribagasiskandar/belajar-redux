@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "produk 1",
+      "price": 899
+    },
+    {
+      "id": 2,
+      "title": "produk 3",
+      "price": 899
+    },
+    {
+      "id": 3,
+      "title": "produk baru",
+      "price": 891
+    },
+    {
+      "id": 4,
+      "title": "produk 4",
+      "price": 890
+    },
+    {
+      "id": 5,
+      "title": "produk 5",
+      "price": 889
+    }
+  ]
+}
